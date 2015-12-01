@@ -1,0 +1,45 @@
+%-*- coding: UTF-8 -*-
+% MathPaper.tex
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[a4paper, 12pt]{article}
+%设置中文字体
+\usepackage{fontspec}
+\setromanfont{STSongti-SC-Regular}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt %文章内中文自动换行
+
+%版面设置x
+\usepackage{geometry}
+\geometry{left=2cm, right=2cm, top=1cm, bottom=2cm}
+
+%首行缩进
+\usepackage{indentfirst}
+\setlength{\parindent}{2.45em}
+
+%全局行间距
+\linespread{1.6}
+
+\title{试谈向量系的极大线性无关组}
+\author{戚海军 \\学号: MP1533024 \\Email: 2316828815@qq.com}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{定义}
+设V是一个向量系，\begin{math}\alpha_{1},\alpha_{2},\alpha_{3},\ldots\alpha_{r}\end{math}是它的一个子系，如果\begin{math}\alpha_{1},\alpha_{2},\alpha_{3},\ldots\alpha_{r}\end{math}线性无关，且V中任一向量都可以由\begin{math}\alpha_{1},\alpha_{2},\alpha_{3},\ldots\alpha_{r}\end{math}这个子系线性表示出来，则称\begin{math}\alpha_{1},\alpha_{2},\alpha_{3},\ldots\alpha_{r}\end{math}是向量系V的一个极大线性无关组。
+
+一般来说向量系的极大线性无关组不是唯一的，但它们一定是等价的，所以下面就以向量系的某一个极大线性无关组来讨论。
+\section{坐标系与坐标}
+极大线性无关组就是线性空间的一个基底，定理给出线性空间中的任一向量都可以由基底唯一的线性表示出来。基底可以看作线性空间的坐标系，有了坐标系，加上坐标就可以表示线性空间里的任何对象，此时的坐标就是一般所说的向量。一般所说的通过基底和对应的向量可以唯一表示一个对象，其实就是先选定坐标系，再确定在此坐标系中的坐标，即可确定此对象。
+
+例如V是一个n维的线性空间，\begin{math}\alpha_{1},\alpha_{2},\alpha_{3},\ldots\alpha_{n}\end{math}是V的一个极大线性无关组，作为V的基底，也可称之为坐标系。则\begin{math}\forall\beta\in S\end{math}可以唯一地表示成\begin{displaymath}\beta = x_{1}\alpha_{1}+x_{2}\alpha_{2}+x_{3}\alpha_{3},+\ldots +x_{n}\alpha_{n}\end{displaymath}，此时\begin{math}[x_{1},x_{2},x_{3},\ldots x_{n}]^T\end{math}就是\begin{math}\beta\end{math}在\begin{math}\alpha_{1},\alpha_{2},\alpha_{3},…\alpha_{n}\end{math}下的坐标或坐标向量，所以通过坐标系和坐标可唯一表示某个向量。
+\section{线性变换与坐标变换}
+在做开发的过程中经常会用到动画效果，其中有个变换叫做仿射变换，当然这个是仿射空间的变换，线性空间同样也存在变换，称之为线性变换。线性变换就是在给定的基底下，从线性空间中的一个点变换到另一个点，这个变换不是和动画一样逐步变化的，而是瞬时变化，有点像电子跃迁。这个变换可以用矩阵来描述，变换过程就是表示该对象的向量乘以表示这个变换的矩阵，结果就是变换结束的那个对象，但是所有的操作都是在选定的基底下进行的，即坐标系是大家依赖的基础，脱离了坐标系，这一切都无从谈起。由于线性变换是线性算子（线性映射）的特殊形式，推广到线性算子也同样成立。
+
+设\begin{math}\alpha_{1},\alpha_{2},\alpha_{3},\ldots\alpha_{n}\end{math}与\begin{math}\beta_{1},\beta_{2},\beta_{3},\ldots\beta_{n}\end{math}是线性空间V的两组基，且\begin{displaymath}[\beta_{1},\beta_{2},\beta_{3},\ldots\beta_{n}] = [\alpha_{1},\alpha_{2},\alpha_{3},\ldots\alpha_{n}]P\end{displaymath}其中\begin{math}P = [p_{1},p_{2},p_{3},\ldots p_{n}]\end{math}，其中第i列是\begin{math}\beta_{i}\end{math}在\begin{math}\alpha_{1},\alpha_{2},\alpha_{3},\ldots\alpha_{n}\end{math}基下的坐标，P可逆，称P是由基\begin{math}\{\alpha_{1},\alpha_{2},\alpha_{3},\ldots\alpha_{n}\}\end{math}到基\begin{math}\{\beta_{1},\beta_{2},\beta_{3},\ldots\beta_{n}\}\end{math}的转换矩阵。
+
+用矩阵来表示线性变换还有另外一种说法，众所周知运动是相对的，其实线性变换也是相对的。可以在选定的坐标系下从一点变换到另一点；也可以说是点不动，变换一下坐标系也可以达到相同的目的，这里说的点不动其实是相对于其他坐标系来说的，相对于原来的坐标系来说肯定是动了的。
+\end{document}

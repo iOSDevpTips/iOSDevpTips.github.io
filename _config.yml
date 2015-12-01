@@ -1,0 +1,24 @@
+# Site settings
+# Do not use tabs in configuration files
+encoding: utf-8
+title: Learning Notes
+author: VictorChee
+email: victor.qhj@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  iOS开发。<br />
+  偶尔玩玩树莓派。<br />
+  喜欢跑步和Ukulele。<br />
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://victorchee.github.io" # the base hostname & protocol for your site
+twitter_username:
+github_username:  victorchee
+
+# Build settings
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "strikethrough", "superscript", "with_toc_data", "footnotes","space_after_headers","highlight","underline","quote","lax_spacing"]
+# Uri
+permalink: /blog/:title/
+safe: true # Disable custom plugins, and ignore symbolic links. GitHub Pages do not support plugins
+#paginate: 3
+highlighter: pygments
