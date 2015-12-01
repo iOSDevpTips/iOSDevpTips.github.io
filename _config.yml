@@ -1,11 +1,11 @@
 # Site settings
 # Do not use tabs in configuration files
 encoding: utf-8
-title: Notes
+title: 笔记
 author: JhonChan
 email: jhonchan25@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  iOS developer<br />
+
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://jhonchan.github.io" # the base hostname & protocol for your site
 twitter_username:
