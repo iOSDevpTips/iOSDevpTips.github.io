@@ -3,9 +3,9 @@
 encoding: utf-8
 title: Notes
 author: JhonChan
-email: victor.qhj@gmail.com
+email: jhonchan25@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  iOS开发者<br />
+  iOS developer<br />
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://jhonchan.github.io" # the base hostname & protocol for your site
 twitter_username:
