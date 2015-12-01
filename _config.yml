@@ -1,17 +1,15 @@
 # Site settings
 # Do not use tabs in configuration files
 encoding: utf-8
-title: Learning Notes
-author: VictorChee
+title: Notes
+author: JhonChan
 email: victor.qhj@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  iOS开发。<br />
-  偶尔玩玩树莓派。<br />
-  喜欢跑步和Ukulele。<br />
+  iOS开发者<br />
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://victorchee.github.io" # the base hostname & protocol for your site
+url: "http://jhonchan.github.io" # the base hostname & protocol for your site
 twitter_username:
-github_username:  victorchee
+github_username:  JhonChan
 
 # Build settings
 markdown: redcarpet
