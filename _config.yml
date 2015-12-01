@@ -1,7 +1,7 @@
 # Site settings
 # Do not use tabs in configuration files
 encoding: utf-8
-title: 笔记
+title: Learning Notes
 author: JhonChan
 email: jhonchan25@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
