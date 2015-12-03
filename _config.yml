@@ -1,22 +1,64 @@
 # Site settings
-# Do not use tabs in configuration files
-encoding: utf-8
 title: Learning Notes
-author: JhonChan
-email: jhonchan25@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
+header-img: "img/facebook.jpg"
+tagline: "cn"  
+description: "我的笔记"  
+baseurl: ""
+url: "http://iOSDevpTips.github.io"  
 
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://jhonchan.github.io" # the base hostname & protocol for your site
-twitter_username:
-github_username:  JhonChan
+# About/contact
+owner: 
+  name: "cxy"
+  email: jhonchan25@gmail.com
+  bio: "记录点滴"
 
-# Build settings
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "strikethrough", "superscript", "with_toc_data", "footnotes","space_after_headers","highlight","underline","quote","lax_spacing"]
-# Uri
-permalink: /blog/:title/
-safe: true # Disable custom plugins, and ignore symbolic links. GitHub Pages do not support plugins
-#paginate: 3
+# Data
+gavatar: http://dreamofbook.qiniudn.com/Az..png
+favicon: img/favicon.png
+
+douban_username:  
+twitter_username: 
+github_username: JhonChan
+facebook_username: 
+weibo_username:  
+zhihu_username: 
+
+# Build settings  
+# use Github Flavored Markdown !important  
+# document: http://jekyllrb.com/docs/configuration/#kramdown  
+markdown: kramdown
 highlighter: pygments
+permalink: pretty
+paginate: 8
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+relative_permalinks: true
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Beijing
+
+# Defaults for posts
+defaults:
+  -
+    scope: 
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "JhonChan"
+      header-img: "img/facebook.jpg" # We don't want posts without a header image, that whould mean white on white
+
+# Comments 
+comments :
+  provider : duoshuo
+  duoshuo :
+    short_name : iOSDevpTips
+  disqus :
+      short_name : iOSDevpTips
+
+# Analytics and webmaster tools stuff goes here
+google_analytics: 
+google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+# Links to include in footer navigation
