@@ -9,10 +9,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <!--
-            <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
-            -->
-            <p>My Learning Notes</p>
+            <a class="navbar-brand" href="{{ site.baseurl }}/">{{ My Learning Notes }}</a>
+
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -23,11 +21,13 @@
                     <a href="{{ site.baseurl }}/">Notes</a>
                 </li>
                 -->
-                {% for page in site.pages %}{% if page.title %}
-                <li>
-                    <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-                </li>
-                {% endif %}{% endfor %}
+                {% for page in site.pages %}
+					{% if page.title %}
+						<li>
+							<a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+						</li>
+					{% endif %}
+                {% endfor %}
             </ul>
         </div>
         <!-- /.navbar-collapse -->
