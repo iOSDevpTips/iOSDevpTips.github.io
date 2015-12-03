@@ -23,15 +23,16 @@ header-img: "img/green.jpg"
 
 ###关注：
 
-- Android
+
 - iOS
-
-
+- Android
 
 
 ###代表作：
+
 <!--
 - [《24款最值得推荐的中文字体》](http://cnfeat.com/blog/2015/05/22/a-24-chinese-fonts/)-->
+
 
 - 待更新
 
