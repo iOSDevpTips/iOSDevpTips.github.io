@@ -12,14 +12,17 @@
             <!--
             <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
             -->
+            <p>My Learning Notes</p>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
+                <!--
                 <li>
                     <a href="{{ site.baseurl }}/">Notes</a>
                 </li>
+                -->
                 {% for page in site.pages %}{% if page.title %}
                 <li>
                     <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
