@@ -1,8 +1,8 @@
 # Site settings
-title: Learning Notes
+title: Notes
 header-img: "img/facebook.jpg"
 tagline: "cn"  
-description: "我的笔记"  
+description: "笔记"  
 baseurl: ""
 url: "http://iOSDevpTips.github.io"  
 
