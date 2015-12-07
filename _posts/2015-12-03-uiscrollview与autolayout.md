@@ -5,6 +5,17 @@ category: AutoLayout
 
 ---
 
+##初心
+
+2014年2月10日，我开始每天写千字文，到现在（2015年3月3日）已超一年，在这期间，我写了347篇文章，全部放在我的博客（cnfeat.com）和公众号（cnfeat）上。
+
+起初我练习千字文的目的很简单：锻炼思考、表达、总结和分享的能力，通过写来提升自己。
+
+写的作用，《重来》这本书说：
+
+>如果准备在一堆人中挑出一个人来做某份工作，那就挑写作能力最好的那个。至于他有没有做过市场、销售、设计、编程或其他什么，倒并不那么重。他们的写作能力迟早会带来好处的。
+>
+>这是因为，一个会写作的人，他厉害之处可不仅仅是会写作而已。文法清晰代表思路明晰。那些会写作的人懂得如何与他人进行沟通。他们使得事情变得更好理解了。他们擅于换位思考。他们懂得抓住重点。这些都是你想在一个应聘者身上看到的特质。
 最近遇到AutoLayout下UIScrollView滑不动的情况，why?
 
 非AutoLayout情况下，可以直接对contentSize属性赋值，但autolayout下contentSize只能通过添加的约束来确定。
@@ -14,7 +25,7 @@ category: AutoLayout
 * 混合方式
 * 纯Autolayout
 
-#混合方式
+#混合方式#
 用xib创建scrollview(启用AutoLayout),用代码创建scrollview的子视图（contentView的 translatesAutoresizingMaskIntoConstraints属性默认是YES;）,并设置scrollview的contentSize.示例代码如下：
 
 	- (void)viewDidLoad {
