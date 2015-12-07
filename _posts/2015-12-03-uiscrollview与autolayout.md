@@ -5,8 +5,6 @@ category: AutoLayout
 
 ---
 
-
-#UIScrollView&Autolayout
 最近遇到AutoLayout下UIScrollView滑不动的情况，why?
 
 非AutoLayout情况下，可以直接对contentSize属性赋值，但autolayout下contentSize只能通过添加的约束来确定。
@@ -16,7 +14,7 @@ category: AutoLayout
 * 混合方式
 * 纯Autolayout
 
-##混合方式
+#混合方式
 用xib创建scrollview(启用AutoLayout),用代码创建scrollview的子视图（contentView的 translatesAutoresizingMaskIntoConstraints属性默认是YES;）,并设置scrollview的contentSize.示例代码如下：
 
 	- (void)viewDidLoad {
@@ -32,7 +30,7 @@ category: AutoLayout
 	 /* the rest of your code here... */
 	}
 	
-##纯Autolayout方式
+#纯Autolayout方式
 * 所有涉及到的view的translatesAutoresizingMaskIntoConstraints属性设为No;
 * 根据scrollView添加的约束（外部的）来放置scrollview;
 * 对scrollview的子视图添加约束。
