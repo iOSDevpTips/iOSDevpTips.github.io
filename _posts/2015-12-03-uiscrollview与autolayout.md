@@ -7,8 +7,6 @@ tags: [AutoLayout]
 description: 通告一下，我已不再每天写千字文，准备采用以下的方法进行练习，由于文章篇幅较长，链接较多，建议到简书或博客进行阅读。
 ---
 
-
-
 最近遇到AutoLayout下UIScrollView滑不动的情况，why?
 
 非AutoLayout情况下，可以直接对contentSize属性赋值，但autolayout下contentSize只能通过添加的约束来确定。
@@ -80,5 +78,5 @@ description: 通告一下，我已不再每天写千字文，准备采用以下�
 
 
 参考：
-[**http://natashatherobot.com/ios-autolayout-scrollview/**](http://natashatherobot.com/ios-autolayout-scrollview/)
+[*http://natashatherobot.com/ios-autolayout-scrollview/*](http://natashatherobot.com/ios-autolayout-scrollview/)
 [*https://developer.apple.com/library/ios/technotes/tn2154/_index.html*](https://developer.apple.com/library/ios/technotes/tn2154/_index.html)
