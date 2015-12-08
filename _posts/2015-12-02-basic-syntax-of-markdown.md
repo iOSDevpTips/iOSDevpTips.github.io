@@ -55,6 +55,9 @@ code
 # 自动链接
 <链接>
 [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+
 [Markdown维基百科](http://zh.wikipedia.org/wiki/Markdown#.E6.AE.B5.E8.90.BD)
+
 [快速语法入门](http://wowubuntu.com/markdown/basic.html)
+
 [完整语法说明](http://wowubuntu.com/markdown/#backslash)
