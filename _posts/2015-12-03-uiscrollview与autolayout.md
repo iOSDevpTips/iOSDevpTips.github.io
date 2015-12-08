@@ -78,7 +78,7 @@ tags: [AutoLayout]
 ###例子
 往scrollview上添加一个高度为720、宽度为屏幕宽的contentView,实现简单的上下滑动效果。xib如下图所示。
 
-![img](http://7xozuy.com1.z0.glb.clouddn.com/autolayout&scrollviewdemo.png =150x250)
+![img](http://7xozuy.com1.z0.glb.clouddn.com/autolayout&scrollviewsnapshot.png)
 
 	//原始方式
 	- (void)setupContent
@@ -114,7 +114,9 @@ tags: [AutoLayout]
 	
 		  
 参考：
+
 [*http://natashatherobot.com/ios-autolayout-scrollview/*](http://natashatherobot.com/ios-autolayout-scrollview/)
 [*https://developer.apple.com/library/ios/technotes/tn2154/_index.html*](https://developer.apple.com/library/ios/technotes/tn2154/_index.html)
-
-![img](./img/posImg/autolayout&scrollview/demo.png =100x200)
+[*http://stackoverflow.com/questions/21788514/uiscrollview-paging-autolayout-storyboard*](http://stackoverflow.com/questions/21788514/uiscrollview-paging-autolayout-storyboard)
+[*http://www.cocoachina.com/ios/20141118/10242.html*](http://www.cocoachina.com/ios/20141118/10242.html)
+[*http://www.jianshu.com/p/258f4efd7a1d/comments/421134*](http://www.jianshu.com/p/258f4efd7a1d/comments/421134)
