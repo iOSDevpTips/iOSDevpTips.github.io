@@ -106,7 +106,7 @@ tags: [AutoLayout]
 	    CGFloat width = kScreen_Width;
 	    NSNumber *number = [NSNumber numberWithFloat:width];
 	    [_contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-	        make.height.mas_equalTo(@710);
+	        make.height.mas_equalTo(@720);
 	        make.width.mas_equalTo(number);
 	        make.edges.equalTo(_scrollView).insets(padding);
 	    }];
