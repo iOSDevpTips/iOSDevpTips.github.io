@@ -76,8 +76,41 @@ tags: [AutoLayout]
 	}];
 
 ###例子
-![img](/img/red.png)
+往scrollview上添加一个高度为720、宽度为屏幕宽的contentView,实现简单的上下滑动效果。xib如下图所示。
 
+![img](http://7xozuy.com1.z0.glb.clouddn.com/autolayout&scrollviewdemo.png)
+
+	//原始方式
+	- (void)setupContent
+	{
+	    [_scrollView addSubview:_contentView];
+	    [_contentView setTranslatesAutoresizingMaskIntoConstraints:NO];
+	    NSLayoutConstraint *width = [NSLayoutConstraint constraintWithItem:_contentView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:kScreen_Width];
+	
+	    NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:_contentView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:720];
+	
+	   /* NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:_contentView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:_scrollView attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0];
+	    NSLayoutConstraint *trailing = [NSLayoutConstraint constraintWithItem:_contentView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:_scrollView attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0];*/
+	        NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:_contentView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:_scrollView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0];
+	        NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:_contentView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:_scrollView attribute:NSLayoutAttributeRight multiplier:1.0 constant:0];
+	    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:_contentView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_scrollView attribute:NSLayoutAttributeTop multiplier:1.0 constant:0];
+	    NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:_contentView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:_scrollView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-100];
+	    [_scrollView addConstraints:@[width, height, left, right, top, bottom]];
+	}
+	//Masonry实现
+	- (void)setupContent
+	{
+	    _isSelectPic = NO;
+	    [_scrollView addSubview:_contentView];
+	    UIEdgeInsets padding = UIEdgeInsetsMake(0, 0, 100, 0);
+	    CGFloat width = kScreen_Width;
+	    NSNumber *number = [NSNumber numberWithFloat:width];
+	    [_contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+	        make.height.mas_equalTo(@710);
+	        make.width.mas_equalTo(number);
+	        make.edges.equalTo(_scrollView).insets(padding);
+	    }];
+	}  
 参考：
 [*http://natashatherobot.com/ios-autolayout-scrollview/*](http://natashatherobot.com/ios-autolayout-scrollview/)
 [*https://developer.apple.com/library/ios/technotes/tn2154/_index.html*](https://developer.apple.com/library/ios/technotes/tn2154/_index.html)
